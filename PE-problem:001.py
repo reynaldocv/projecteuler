@@ -1,4 +1,4 @@
-#Problem 1: Multiples of 3 and 5
+#Problem 001: Multiples of 3 and 5
 import datetime
 
 def program():
@@ -11,4 +11,4 @@ if __name__ == "__main__":
 	h1 = datetime.datetime.now()	
 	ans = program()
 	h2 = datetime.datetime.now()
-	print("Problem 001 (",h2-h1,") : ",ans)
+	print("Problem 001 (",h2 - h1,") : ",ans)
