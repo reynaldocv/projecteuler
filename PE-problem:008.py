@@ -22,4 +22,3 @@ if __name__ == "__main__":
 	ans = program()
 	h2 = datetime.datetime.now()
 	print("Problem 008 (",h2 - h1,") : ", ans)
-
