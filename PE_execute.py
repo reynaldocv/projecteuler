@@ -8,7 +8,7 @@ def program():
 		if my_file.is_file():
 			os.system("python3 "+file)
 
-	for i in range(11,100):		
+	for i in range(10,100):		
 		file = "PE-problem:0"+str(i)+".py"		
 		my_file = Path(file)
 		if my_file.is_file():
