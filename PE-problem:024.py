@@ -18,7 +18,7 @@ def program():
 		n_th = n_th % fact
 		fact //= n
 
-	return ans+"".join(values)
+	return ans + "".join(values)
 	
 
 if __name__ == "__main__":	
