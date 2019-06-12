@@ -13,7 +13,7 @@ def program():
 		else: 
 			n_div = divisors[nro] * divisors[(nro-1)//2]
 		if n_div > max_div:				
-			return (nro-1)*nro//2
+			return (nro - 1)*nro//2
 	
 if __name__ == "__main__":
 	h1 = datetime.datetime.now()
