@@ -2,13 +2,20 @@
 import datetime
 
 def program():	
-	archivo = open('PE-problem 022_names.txt')
-	nombres = []
-	for line in archivo:
-		line = line.replace('"','')
-		nombres = line.split(',')
+	def max_sum(data):
+		n = len(data)
+		for i in range(n-2 , -1, -1):
+			for j in range(i+1):
+				data[i][j] += max(data[i+1][j], data[i+1][j+1])	
+		return data[0][0]
+
+	file = open('PE-txt/PE-problem 018_in.txt')
+	data = []
+	for line in file:
+		line = line.replace('\n','')		
+		data.append([int(a) for a in line.split(" ")])
 		
-	nombres.sort()
+	return max_sum(data)
 	rpta=0
 	
 
