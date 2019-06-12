@@ -25,5 +25,5 @@ if __name__ == "__main__":
 	h1 = datetime.datetime.now()
 	ans = program()
 	h2 = datetime.datetime.now()
-	print("Problem 006 (",h2 - h1,") : ", ans)
+	print("Problem 007 (",h2 - h1,") : ", ans)
 
