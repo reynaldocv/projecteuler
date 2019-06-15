@@ -21,14 +21,13 @@ def program():
 	
 	ans = []
 	for digits_ in group.keys():
-		if len(group[digits_]) >= 3:			
-			for i in range(len(group[digits_])):
-				for j in range(i + 1, len(group[digits_])):
-					for k in range(j + 1, len(group[digits_])):
-						aux1 = group[digits_][k] - group[digits_][j]
-						aux2 = group[digits_][j] - group[digits_][i] 
-						if  aux1 == aux2 :
-							ans.append(str(group[digits_][i]) + str(group[digits_][i]) + str(group[digits_][i]))
+		for i in range(len(group[digits_])):
+			for j in range(i + 1, len(group[digits_])):
+				for k in range(j + 1, len(group[digits_])):
+					aux1 = group[digits_][k] - group[digits_][j]
+					aux2 = group[digits_][j] - group[digits_][i] 
+					if  aux1 == aux2 :
+						ans.append(str(group[digits_][i]) + str(group[digits_][i]) + str(group[digits_][i]))
 
 	print(ans)		
 
