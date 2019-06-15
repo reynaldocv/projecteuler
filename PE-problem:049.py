@@ -19,7 +19,7 @@ def program():
 			for mul in range(2*nro, lim, nro):
 				primes[mul] = 1
 	
-	ans = []
+	nros = []
 	for digits_ in group.keys():
 		for i in range(len(group[digits_])):
 			for j in range(i + 1, len(group[digits_])):
@@ -30,10 +30,11 @@ def program():
 						aux3 = str(group[digits_][i])
 						aux3 += str(group[digits_][j])
 						aux3 += str(group[digits_][k])
-						ans.append(aux3)
-	for i in ans:
-		if i != "148748178147":
-			return i
+						nros.append(aux3)
+
+	for nro in nros:
+		if nro != "148748178147":
+			return nro
 		
 
 
