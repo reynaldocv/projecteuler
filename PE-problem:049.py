@@ -36,11 +36,6 @@ def program():
 		if nro != "148748178147":
 			return nro
 		
-
-
-		
-	
-		
 if __name__ == "__main__":	
 	h1 = datetime.datetime.now()
 	ans = program()
