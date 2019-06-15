@@ -25,12 +25,6 @@ def program():
 		if pandigital % 2 == 1:
 			if is_prime(pandigital):
 				return pandigital
-
-	
-		
-	
-	
-
 	
 if __name__ == "__main__":	
 	h1 = datetime.datetime.now()
