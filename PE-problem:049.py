@@ -27,9 +27,14 @@ def program():
 					aux1 = group[digits_][k] - group[digits_][j]
 					aux2 = group[digits_][j] - group[digits_][i] 
 					if  aux1 == aux2 :
-						ans.append(str(group[digits_][i]) + str(group[digits_][i]) + str(group[digits_][i]))
-
-	print(ans)		
+						aux3 = str(group[digits_][i])
+						aux3 += str(group[digits_][j])
+						aux3 += str(group[digits_][k])
+						ans.append(aux3)
+	for i in ans:
+		if i != "148748178147":
+			return i
+		
 
 
 		
