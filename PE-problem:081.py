@@ -16,9 +16,7 @@ def program():
 		for col in range(1, lim):
 			data[row][col] += min(data[row - 1][col], data[row][col - 1])
 	
-	print(data)		
 	return data[lim - 1][lim - 1]
-	
 	
 if __name__ == "__main__":	
 	h1 = datetime.datetime.now()
