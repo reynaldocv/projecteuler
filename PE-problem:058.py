@@ -9,19 +9,16 @@ def program():
 				return False
 		return True
 
-	nro, cycle, primes, nros = 1, 1, 0, 1
-	while True:
+	nro, cycle, primes, nros = 9, 2, 3, 5
+	while primes/nros > 1/10:
 		for i in range(4):
 			nro += 2*cycle
 			if is_prime(nro):
 				primes += 1
-		nros += 4
-		if primes/nros < 1/10:
-			return 2*cycle + 1
+		nros += 4		
 		cycle += 1
-
-
-
+	return 2*cycle - 1
+		
 		
 if __name__ == "__main__":	
 	h1 = datetime.datetime.now()
