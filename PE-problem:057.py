@@ -7,7 +7,6 @@ def program():
 	ans = 0
 	for i in range(lim):
 		num, den = den*2 + num, num + den
-		print(num, den)
 		if len(str(num)) > len(str(den)):
 			ans += 1
 

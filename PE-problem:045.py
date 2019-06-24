@@ -10,7 +10,6 @@ def program():
 		x = (-1 + (1 + 8*nro)**(.5))/2
 		return x == int(x)
 
-	
 	n = 144
 	while True:
 		Hn = n*(2*n - 1)	
@@ -18,12 +17,9 @@ def program():
 			return Hn
 		n += 1
 	
-		
-		
-	
 if __name__ == "__main__":	
 	h1 = datetime.datetime.now()
 	ans = program()
 	h2 = datetime.datetime.now()
-	print("Problem 041 (", h2 - h1, ") : ", ans)
+	print("Problem 045 (", h2 - h1, ") : ", ans)
 
