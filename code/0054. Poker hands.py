@@ -12,33 +12,37 @@ class solution:
 			if len(numbers) == 5:
 				if min(numbers.keys()) + 4 == max(numbers.keys()):
 					if len(types) == 1: 
-						return (9,) + tuple(sorted(numbers.keys(), reverse = True))
+						ans = (9,) + tuple(sorted(numbers.keys(), reverse = True))
 					else: 
-						return (5,) + tuple(sorted(numbers.keys(), reverse = True))
+						ans = (5,) + tuple(sorted(numbers.keys(), reverse = True))
 				
-				elif sorted(numbers.keys()) == [2,3,4,5,14]:
-					if len(types) == 1: 
-						return (9, 5, 4, 3, 2, 1)
-					else: 
-						return (5, 5, 4, 3, 2, 1)
-
 				elif len(types) == 1: 
-					return (6,) + tuple(sorted(numbers.keys(), reverse = True))		
+					ans = (6,) + tuple(sorted(numbers.keys(), reverse = True))		
 				else: 
-					return (1,) + tuple(sorted(numbers.keys(), reverse = True))
+					ans = (1,) + tuple(sorted(numbers.keys(), reverse = True))
 				
 			elif len(numbers) == 4: 
-				return (2,) + tuple([key for key in numbers if numbers[key]== 2]*2) + tuple(sorted([key for key in numbers if numbers[key]== 1], reverse = True))
+				ans =  (2,) + tuple([key for key in numbers if numbers[key]== 2]*2) 
+				ans += tuple(sorted([key for key in numbers if numbers[key]== 1], reverse = True))
+				
 			elif len(numbers) == 3:
 				if max(numbers.values()) == 3: 
-					return (4,) + tuple([key for key in numbers if numbers[key]== 3]*3) + tuple(sorted([key for key in numbers if numbers[key]== 1], reverse = True))
+					ans = (4,) + tuple([key for key in numbers if numbers[key]== 3]*3) 
+					ans += tuple(sorted([key for key in numbers if numbers[key]== 1], reverse = True))
+					
 				else:
-					return (3,) + tuple(sorted([key for key in numbers if numbers[key]== 2]*2, reverse = True)) + tuple([key for key in numbers if numbers[key]== 1])
+					ans = (3,) + tuple(sorted([key for key in numbers if numbers[key]== 2]*2, reverse = True)) 
+					ans += tuple([key for key in numbers if numbers[key]== 1])
+				
 			elif len(numbers) == 2: 
 				if max(numbers.values()) == 4: 
-					return (8,) + tuple(sorted([key for key in numbers if numbers[key] == 4]*4)) + tuple(sorted([key for key in numbers if numbers[key] == 1]))
+					ans = (8,) + tuple(sorted([key for key in numbers if numbers[key] == 4]*4)) 
+					ans += tuple(sorted([key for key in numbers if numbers[key] == 1]))
 				else: 
-					return (7,) + tuple(sorted([key for key in numbers if numbers[key] == 3]*3)) + tuple(sorted([key for key in numbers if numbers[key] == 2]*2))
+					ans = (7,) + tuple(sorted([key for key in numbers if numbers[key] == 3]*3)) 
+					ans += tuple(sorted([key for key in numbers if numbers[key] == 2]*2))
+				
+			return ans
 				
 		ans = 0
 
@@ -53,12 +57,8 @@ class solution:
 		
 			hand1 = hands[:5]
 			hand2 = hands[5:]
-			if helper(hand1)[0] == 9 or helper(hand2)[0] == 9:
-				print(hand1, helper(hand1))
-				print(hand2, helper(hand2))
-
-			if helper(hand1) > helper(hand2):
-				
+			
+			if helper(hand1) > helper(hand2):				
 				ans +=1 
 
 		return ans
